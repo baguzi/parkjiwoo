@@ -4,7 +4,8 @@ class Elevator {
     int maxPeople;
     int changePeople;
 
-    public Elevator(int max) {
+    public Elevator(int max)
+    {
         maxPeople = max;
     }
 
@@ -27,7 +28,18 @@ class Elevator {
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
 
+        System.out.print("엘리베이터 최대 인원을 입력하세요: ");
+        int max = scanner.nextInt();
+
+        Elevator elevator = new Elevator(max);
+
+        System.out.print("현재 탑승 인원을 입력하세요: ");
+        int people = scanner.nextInt();
+
+        elevator.setPeople(people);
+        elevator.checkPeople();
     }
 }
